@@ -1,3 +1,5 @@
+//This program is written in java programming language.
+
 import java.util.Scanner;
 
 
@@ -5,48 +7,48 @@ import java.util.Scanner;
 public class Main
 {
     
-
+	//Ion Engines description and facts
 	public static void ionEngine(int caseNum) {
 
 	    switch(caseNum) {
 	
-      case 1:
+      		case 1:
 
-                System.out.println("Ion Engines:");
+			System.out.println("Ion Engines:");
 
-                System.out.println("This type of propulsion can efficiently use fuel and electrical power,");
+			System.out.println("This type of propulsion can efficiently use fuel and electrical power,");
 
-                System.out.println("which can let the spacecraft travel farther, faster and cheaper. The trade-off");
+			System.out.println("which can let the spacecraft travel farther, faster and cheaper. The trade-off");
 
-                System.out.println("for the high speed is the low thrust of ion thrusters. So this cannot");
+			System.out.println("for the high speed is the low thrust of ion thrusters. So this cannot");
 
-                System.out.println("put a spacecraft in space due to the low thrust it produces which cannot be used");
+			System.out.println("put a spacecraft in space due to the low thrust it produces which cannot be used");
+
+		       	System.out.println("to escape Earthâ€™s gravity and atmosphere.");
+
+			System.out.println("\nSo, any ideas of how fast this will go? (Please answer in km/s units and only enter the number)");
+
+			break;
+
  
-               System.out.println("to escape Earth’s gravity and atmosphere.");
 
-                System.out.println("\nSo, any ideas of how fast this will go? (Please answer in km/s units and only enter the number)");
+		case 2:
 
-		break;
+			System.out.println("Did you know that chemical rockets have showed fuel efficiencies up to");
 
- 
+			System.out.println("35% whereas ion thrusters have fuel efficiencies above 90%.");
 
-            case 2:
+			System.out.println("\nFun Fact: Ion thrusters are currently being used to keep communication");
 
-                System.out.println("Did you know that chemical rockets have showed fuel efficiencies up to");
+		       	System.out.println("satellites in proper position relative to Earth and also used for");
 
-                System.out.println("35% whereas ion thrusters have fuel efficiencies above 90%.");
+		       	System.out.println("propulsion on deep space probes!");
 
-                System.out.println("\nFun Fact: Ion thrusters are currently being used to keep communication");
- 
-               System.out.println("satellites in proper position relative to Earth and also used for");
- 
-               System.out.println("propulsion on deep space probes!");
-
-                break;
+			break;
 
 
 
-            //Data resource: https://www.nasa.gov/centers/glenn/technology/Ion_Propulsion1.html#:~:text=Spacecraft%20powered%20by%20these%20thrusters,thrust%20(or%20low%20acceleration).
+            //Resource: https://www.nasa.gov/centers/glenn/technology/Ion_Propulsion1.html#:~:text=Spacecraft%20powered%20by%20these%20thrusters,thrust%20(or%20low%20acceleration).
 
 
             }
@@ -55,7 +57,7 @@ public class Main
 
 
 
-    
+    //VASIMR description and facts
     public static void vasimr(int caseNum) {
 
 	    switch(caseNum) {
@@ -78,7 +80,7 @@ public class Main
 
     		    System.out.println("\nBut what do you think the average speed it could go?");
     
-                break;
+                    break;
 
 
 
@@ -89,7 +91,7 @@ public class Main
 		    break;
 
     
-		//Data resource: https://www.nasa.gov/audience/foreducators/k-4/features/F_Engine_That_Does_More.html
+		//Resource: https://www.nasa.gov/vision/space/travelinginspace/future_propulsion.html
 
 
 	    }
@@ -98,7 +100,7 @@ public class Main
 
     
 
-	
+	//SEP description and facts
 	public static void sep(int caseNum) {
 
 	    switch(caseNum) {
@@ -117,16 +119,17 @@ public class Main
 
         	    System.out.println("\nAny ideas as to how fast a spacecraft with this propulsion system can go?");
 	
-            break;
+            	    break;
 
 
 
     		case 2:
 
     		    System.out.println("Fun Fact: By adding more Hall thrusters can increase the power!");
+		    break;
 
 		
-		//Data resource: https://www.nasa.gov/mission_pages/tdm/sep/index.html
+		//Resource: https://www.nasa.gov/mission_pages/tdm/sep/index.html
 
        	   }
 
@@ -135,7 +138,9 @@ public class Main
 
 
     
-    
+    	/**
+	This method asks for the user input and turns it from a string into an integer.
+	*/
 	public static int guess() {
 
         	Scanner guess = new Scanner(System.in);
@@ -149,7 +154,10 @@ public class Main
     	}
 
 
-
+	/**
+	This method checks to see if the guess is too high or too low compared to the correct answer; 
+	and then prints the appropriate message.
+	*/
     	public static void check(int answer, int guess){
 
         	if (guess > answer) {
@@ -166,7 +174,9 @@ public class Main
 
 
 
-
+	/**
+	This method allows the user to go to the next round.
+	*/
     	public static void next(){
 
 		System.out.println("\nPlease press enter key to go to the next round");
@@ -177,6 +187,12 @@ public class Main
 
 	}
 
+	/**
+	This method takes in the correct answer as an argument.
+	It also contains the loop for guessing and allows the user to escape the loop
+	by entering 0. This method also prints out the congratulatory message if
+	the user guesses the correct answer. 
+	*/
 	public static void format(int num) {
 
 	    int userInput;
@@ -203,7 +219,8 @@ public class Main
 
 
 	public static void main(String[] args) {
-
+		
+		//welcome message
 		System.out.println("Welcome to Speed Guess!");
 
         	System.out.println("Where you enter the world of speed in space!");
@@ -223,7 +240,7 @@ public class Main
         	
 		String ok = start.nextLine();
 
-        	while(!ok.equals("start")) {
+        	while(!ok.equals("start")) {	//checks to see if 'start' is entered, if not then insists the user to enter 'start'. Round 1 does not begin until 'start' is entered.
 
             		System.out.println("Please type 'start'");
 
@@ -235,23 +252,20 @@ public class Main
 		}
 
 
-
+		//Round 1
         	System.out.println("\nRound 1:");
-	
-        ionEngine(1);
-
+        	ionEngine(1);
 	    	format(90);       	
 		ionEngine(2);
 
 
 	    
-	next();
+		next();
 
 
-        
+        	//Round 2
 		System.out.println("\nRound 2:"); 
 	   	vasimr(1);
-
 	    	format(50);
 		vasimr(2);
 
@@ -260,11 +274,9 @@ public class Main
 	    	next();
 
  
-	    
-	System.out.println("\nRound 3:");
-
+	    	//Round 3
+		System.out.println("\nRound 3:");
 	    	sep(1);
-
 	    	format(29);
 		sep(2);
 
@@ -274,7 +286,7 @@ public class Main
 
 	
 
-		System.out.println("Game Over.");
+		System.out.println("\nGame Over.");	//game ends
 
 	}
 
