@@ -286,7 +286,7 @@ public class SpeedGuess
 
 	
 
-		System.out.println("\nGame Over.");	//game ends
+		System.out.println("\nGame Over.");	//game ends 
 
 	}
 
