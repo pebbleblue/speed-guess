@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 
 
-public class Main
+public class SpeedGuess
 {
     
 	//Ion Engines description and facts
